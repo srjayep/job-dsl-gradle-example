@@ -11,8 +11,7 @@ job("$basePath/Deploy Gateway Config - MC STAGE") {
     }
     parameters {
         stringParam 'SIDE'
-        stringParam 'sideA'
-        stringParam 'sideB'
+	choiceParam('SIDE', ['Side1 (default)', 'Side2'])
     }
     triggers {
         scm 'H/5 * * * *'
