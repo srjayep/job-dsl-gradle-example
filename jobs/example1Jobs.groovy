@@ -1,4 +1,4 @@
-ng basePath = 'Deploy Gateway Config - MC STAGE'
+String basePath = 'Deploy Gateway Config - MC STAGE'
 String repo = 'https://git.corp.adobe.com/adobe-apis/api-gateway-mc/'
 
 folder(basePath) {
