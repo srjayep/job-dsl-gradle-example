@@ -16,6 +16,7 @@ job("$basePath/Deploy Gateway Config - MC STAGE") {
         scm 'H/5 * * * *'
     }
     steps {
+        shell readFileFromWorkspace('resources/test.sh')
         grails {
             useWrapper true
             targets(['test-app', 'war'])
