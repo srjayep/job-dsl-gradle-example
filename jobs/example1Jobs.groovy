@@ -10,7 +10,6 @@ job("$basePath/Deploy Gateway Config - MC STAGE") {
         github repo
     }
     parameters {
-        stringParam 'SIDE'
 	choiceParam('SIDE', ['Side1 (default)', 'Side2'])
     }
     triggers {
