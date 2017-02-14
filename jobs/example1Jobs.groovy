@@ -20,7 +20,7 @@ job("$basePath/Deploy Gateway Config - MC STAGE") {
     steps {
         grails {
             useWrapper true
-            #targets(['test-app', 'war'])
+            targets(['test-app', 'war'])
         }
     }
 }
