@@ -1,13 +1,18 @@
-String basePath = 'example1'
-String repo = 'sheehan/grails-example'
+ng basePath = 'Deploy Gateway Config - MC STAGE'
+String repo = 'https://git.corp.adobe.com/adobe-apis/api-gateway-mc/'
 
 folder(basePath) {
-    description 'This example shows basic folder/job creation.'
+    description 'Deploy Gateway Config - MC STAGE'
 }
 
-job("$basePath/grails example build") {
+job("$basePath/Deploy Gateway Config - MC STAGE") {
     scm {
         github repo
+    }
+    parameters {
+        stringParam 'SIDE'
+        stringParam 'sideA'
+        stringParam 'sideB'
     }
     triggers {
         scm 'H/5 * * * *'
@@ -15,7 +20,7 @@ job("$basePath/grails example build") {
     steps {
         grails {
             useWrapper true
-            targets(['test-app', 'war'])
+            #targets(['test-app', 'war'])
         }
     }
 }
