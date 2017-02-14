@@ -1,5 +1,5 @@
 String basePath = 'Deploy Gateway Config - MC STAGE'
-String repo = 'https://git.corp.adobe.com/adobe-apis/api-gateway-mc/'
+String repo = 'git@git.corp.adobe.com:adobe-apis/api-gateway-mc.git'
 
 folder(basePath) {
     description 'Deploy Gateway Config - MC STAGE'
