@@ -11,7 +11,7 @@ job('seed') {
     steps {
         gradle 'clean test'
         dsl {
-            external 'jobs/**/*Jobs.groovy'
+            external 'jobs/**/doc*.groovy'
             additionalClasspath 'src/main/groovy'
         }
     }
