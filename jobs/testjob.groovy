@@ -17,10 +17,6 @@ job("$basePath/Deploy Gateway Config - MC STAGE") {
     }
     steps {
         shell readFileFromWorkspace('resources/test.sh')
-        grails {
-            useWrapper true
-            targets(['test-app', 'war'])
-        }
     }
 }
 
@@ -29,6 +25,6 @@ job("$basePath/grails example deploy") {
         stringParam 'host'
     }
     steps {
-        shell 'scp war file; restart...'
+        shell 'echo test'
     }
 }
