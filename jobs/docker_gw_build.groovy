@@ -24,7 +24,7 @@ job("$basePath/Docker Image Example") {
             targets(['test-app', 'war'])
         }
     }
-}
+
 publishers {
             downstreamParameterized {
                 trigger(twistlock) {
@@ -34,4 +34,5 @@ publishers {
                     condition(conditionType)
                 }
         }
+}
 }
