@@ -1,4 +1,4 @@
-tring basePath = 'Docker Image EXAMPLE'
+String basePath = 'Docker Image EXAMPLE'
 String repo = 'adobe-apis/api-gateway'
 
 folder(basePath) {
@@ -34,4 +34,4 @@ publishers {
                     condition(conditionType)
                 }
         }
-
+}
