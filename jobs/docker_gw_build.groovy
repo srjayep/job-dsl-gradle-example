@@ -27,11 +27,11 @@ job("$basePath/Docker Image Example") {
 
 publishers {
             downstreamParameterized {
-                trigger(twistlock) {
+                trigger('twistlock') {
                     parameters {
                         currentBuild()
                     }
-                    condition(conditionType)
+                    condition('UNSTABLE_OR_BETTER')
                 }
         }
 }
