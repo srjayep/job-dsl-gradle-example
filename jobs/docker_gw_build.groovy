@@ -1,4 +1,4 @@
-String basePath = 'Docker Image EXAMPLE'
+tring basePath = 'Docker Image EXAMPLE'
 String repo = 'adobe-apis/api-gateway'
 
 folder(basePath) {
@@ -24,7 +24,14 @@ job("$basePath/Docker Image Example") {
             targets(['test-app', 'war'])
         }
     }
-    postBuildSteps('twistlock_scan') {
-    }
-    onlyIfBuildSucceeds(false)	
 }
+publishers {
+            downstreamParameterized {
+                trigger(twistlock) {
+                    parameters {
+                        currentBuild()
+                    }
+                    condition(conditionType)
+                }
+        }
+
