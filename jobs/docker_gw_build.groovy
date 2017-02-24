@@ -14,7 +14,7 @@ job("$basePath/Docker Image Example") {
     }
     steps {
         shell readFileFromWorkspace('resources/docker_GW_exec.sh')
-        rake ('build') target('test')
+        rake ('build')
         grails {
             useWrapper true
             targets(['test-app', 'war'])
