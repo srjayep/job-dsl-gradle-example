@@ -14,9 +14,10 @@ job("$basePath/Docker Image Example") {
     }
     steps {
         shell readFileFromWorkspace('resources/docker_GW_exec.sh')
-	rake ('task')
+        rakeVersion('ruby-2.3.1')
         rake ('prepare_fixtures') {
         task ('docker:release')
+        rake ('docker:tag')
         installation('ruby-2.3.1')
         }
         grails {
