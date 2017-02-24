@@ -41,7 +41,7 @@ publishers {
                     parameters {
                         currentBuild()
                     }
-                    condition('STABLE')
+                    condition('SUCCESS')
                 }
         }
 }
