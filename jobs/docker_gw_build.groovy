@@ -22,11 +22,11 @@ job("$basePath/Docker Image Example") {
     }
 }
 
-job("$basePath/grails example deploy") {
-    parameters {
-        stringParam 'host'
-    }
-    steps {
-        shell 'scp war file; restart...'
-    }
-}
+#job("$basePath/grails example deploy") {
+#    parameters {
+#        stringParam 'host'
+#    }
+#    steps {
+#        shell 'scp war file; restart...'
+#    }
+#}
