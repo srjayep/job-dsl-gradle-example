@@ -14,7 +14,6 @@ job("$basePath/Docker Image Example") {
     }
     steps {
         shell readFileFromWorkspace('resources/docker_GW_exec.sh')
-        rakeVersion('ruby-2.3.1')
         rake ('prepare_fixtures') {
         task ('docker:release')
         rake ('docker:tag')
