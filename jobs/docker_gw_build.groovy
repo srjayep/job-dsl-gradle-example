@@ -24,8 +24,7 @@ job("$basePath/Docker Image Example") {
             targets(['test-app', 'war'])
         }
     }
-    postBuildSteps('Twistlock_scan') {
-        shell("echo 'run after steps'")
+    postBuildSteps(T'wistlock_scan') {
     }
-    onlyIfBuildSucceeds()	
+    onlyIfBuildSucceeds(false)	
 }
