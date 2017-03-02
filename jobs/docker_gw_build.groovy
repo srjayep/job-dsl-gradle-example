@@ -5,7 +5,7 @@ folder(basePath) {
     description 'sree test'
 }
 
-job("$basePath/Docker Image Example") {
+job("$basePath/test") {
     scm {
         github repo
     }
