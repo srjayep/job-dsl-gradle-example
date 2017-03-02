@@ -2,7 +2,7 @@ String basePath = 'Docker API-Gateway Base Image Build'
 String repo = 'adobe-apis/api-gateway'
 
 folder(basePath) {
-    description 'Docker API-Gateway Base Image Build'
+    description 'sree test'
 }
 
 job("$basePath/Docker Image Example") {
